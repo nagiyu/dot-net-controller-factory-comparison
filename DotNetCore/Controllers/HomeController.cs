@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace DotNetCore.Controllers
 {
+    [SessionBehavior(SessionBehavior.Required)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
