@@ -16,6 +16,9 @@ namespace DotNetFramework
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // カスタムコントローラーファクトリを登録
+            ControllerBuilder.Current.SetControllerFactory(typeof(CustomControllerFactory));
         }
     }
 }
